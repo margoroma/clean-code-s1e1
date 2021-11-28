@@ -22,8 +22,9 @@ body {
 }
 
 @media (max-width:768px) {
-.main-image { text-align: center;
-}
+    .main-image {
+        text-align: center;
+    }
 }
 
 .main-page-element {
@@ -135,7 +136,7 @@ li > label {
     width: 226px;
 }
 
-li >    input[type="text"] {
+li > input[type="text"] {
     width: 226px;
 }
 
