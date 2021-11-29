@@ -38,7 +38,7 @@ var createNewTaskElement=function(taskString){
     //Each elements, needs appending
     checkBox.type="checkbox";
     editInput.type="text";
-    editInput.className="task";
+    editInput.className="task__input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
     editButton.className="btn-edit";
@@ -47,6 +47,8 @@ var createNewTaskElement=function(taskString){
     deleteButtonImg.src="./remove.svg";
     deleteButtonImg.alt="";
     deleteButton.appendChild(deleteButtonImg);
+
+    listItem.className="list-todo__item";
 
 
     //and appending.
@@ -71,7 +73,6 @@ var addTask=function(){
     bindTaskEvents(listItem, taskCompleted);
 
     taskInput.value="";
-
 }
 
 //Edit an existing task.
@@ -170,27 +171,12 @@ var bindTaskEvents=function(taskListItem,checkBoxEventHandler){
 }
 
 //cycle over incompleteTaskHolder ul list items
-//for each list item
-for (var i=0; i<incompleteTaskHolder.children.length;i++){
-
-    //bind events to list items chldren(tasksCompleted)
+for (var i=0; i<incompleteTaskHolder.children.length; i++){
     bindTaskEvents(incompleteTaskHolder.children[i],taskCompleted);
 }
 
 
-
-
 //cycle over completedTasksHolder ul list items
-for (var i=0; i<completedTasksHolder.children.length;i++){
-    //bind events to list items chldren(tasksIncompleted)
+for (var i=0; i<completedTasksHolder.children.length; i++){
     bindTaskEvents(completedTasksHolder.children[i],taskIncomplete);
 }
-
-
-
-
-// Issues with usability don't get seen until they are in front of a human tester.
-
-//prevent creation of empty tasks.
-
-//Change edit to save when you are in edit mode.
