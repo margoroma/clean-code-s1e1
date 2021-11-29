@@ -16,7 +16,7 @@ body {
     width: 100%;
 }
 
-/* .main-image  */
+.main-image,
 .ref-info {
     font-family: fantasy, cursive;
 }
@@ -94,6 +94,7 @@ input[type="text"] {
     border-radius: 6px;
     font-family: Lato, sans-serif;
     color: #888;
+    width: 226px;
 }
 
 input[type="text"]:focus {
@@ -115,7 +116,6 @@ li {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -137,10 +137,9 @@ li > label {
 }
 
 /* li >  */
-input[type="text"] {
+/* input[type="text"] {
     width: 226px;
-}
-
+} */
 
 .btn-delete img {
     height: 2em;
@@ -153,21 +152,20 @@ input[type="text"] {
 }
 
 /* Completed */
-/* ul */
 #completed-tasks label {
     text-decoration: line-through;
     color: #888;
 }
 
-ul li input[type=text] {
+li input[type=text] {
     display: none;
 }
 
-ul li.editMode input[type=text] {
+.editMode input[type=text] {
     display: inline-block;
     width: 224px;
 }
 
-ul li.editMode label {
+.editMode label {
     display: none;
 }
